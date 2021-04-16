@@ -2,10 +2,10 @@
 ;;
 
 (define-module (jin packages hello)
-  #:use-modules (guix packages)
-  #:use-modules (guix download)
-  #:use-modules (guix build-system gnu)
-  #:use-modules (guix licenses))
+  #:use-module (guix packages)
+  #:use-module (guix download)
+  #:use-module (guix build-system gnu)
+  #:use-module (guix licenses))
 
 ;; (define-module (jin packages hello)
 ;;   #:use-module ((guix licenses) #:prefix license:)
