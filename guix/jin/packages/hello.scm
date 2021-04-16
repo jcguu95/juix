@@ -1,9 +1,11 @@
 ;; Taken from https://guix.gnu.org/cookbook/en/html_node/A-_0060_0060Hello-World_0027_0027-package.html
 ;;
-(use-modules (guix packages)
-             (guix download)
-             (guix build-system gnu)
-             (guix licenses))
+
+(define-module (jin packages hello)
+  #:use-modules (guix packages)
+  #:use-modules (guix download)
+  #:use-modules (guix build-system gnu)
+  #:use-modules (guix licenses))
 
 (define-public hello
   (package
