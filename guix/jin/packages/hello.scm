@@ -1,5 +1,6 @@
-;; Taken from https://guix.gnu.org/cookbook/en/html_node/A-_0060_0060Hello-World_0027_0027-package.html
-;;
+;; This file is just for my learning purpose. Follow the tutorial
+;; at the end of this profile to fetch hello-9.99 from this
+;; channel.
 
 (define-module (jin packages hello)
   #:use-module (guix packages)
@@ -26,3 +27,30 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
     (home-page "https://www.gnu.org/software/hello/")
     (license gpl3+)))
+
+;; TUTORIAL
+;;
+;; ;; Put the following in test.scm
+;; (use-modules
+;;  (guix channels)
+;;  (guix inferior))
+
+;; (packages->manifest
+;;  (let* ((channels
+;;          (list (channel
+;;                 (name 'juix)
+;;                 (url "https://github.com/jcguu95/juix"))
+;;                (channel
+;;                 (name 'guix) (url "https://git.savannah.gnu.org/git/guix.git")
+;;                 (commit "a5bbd38fd131282e928144e869dcdf1e09259085"))))
+;;         (inferior (inferior-for-channels channels)))
+;;    (lookup-inferior-packages inferior "hello" "9.99")))
+
+;; ;; Put the following in `~/.config/guix/channels.scm`
+;; (cons* (channel
+;;         (name 'juix)
+;;         (url "https://github.com/jcguu95/juix"))
+;;        %default-channels)
+
+;; ;; Run `guix pull` as the user, and then source the profile.
+;; ;; Run `$ guix package -m test.scm -p ./test/profile`.
