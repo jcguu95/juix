@@ -97,27 +97,27 @@ command-line arguments, multiple languages, and so on.")
     (home-page "https://www.gnu.org/software/hello/")
     (license gpl3+)))
 
-(define-public emacs-company-tern
-  (package
-    (name "emacs-company-tern")
-    (version "0.3.0")
-    (source
-     (origin
-       (method url-fetch)
-       (uri (string-append
-             "https://github.com/proofit404/company-tern/archive/"
-             "v" version ".tar.gz"))
-       (file-name (string-append name "-" version ".tar.gz"))
-       (sha256
-        (base32
-         "1qgrgnbajgnsnx4az4ajnlrhc73q0xxjikk617nf3cs87x4772a6"))))
-    (build-system emacs-build-system)
-    (propagated-inputs
-     `(("emacs-company" ,emacs-company)
-       ("emacs-tern" ,emacs-tern)
-       ("emacs-dash" ,emacs-dash)
-       ("emacs-s" ,emacs-s)))
-    (home-page "https://github.com/proofit404/company-tern")
-    (synopsis "Tern backend for company-mode")
-    (description "This package provides Tern backend for Company.")
-    (license license:gpl3+)))
+;; (define-public emacs-company-tern
+;;   (package
+;;     (name "emacs-company-tern")
+;;     (version "0.3.0")
+;;     (source
+;;      (origin
+;;        (method url-fetch)
+;;        (uri (string-append
+;;              "https://github.com/proofit404/company-tern/archive/"
+;;              "v" version ".tar.gz"))
+;;        (file-name (string-append name "-" version ".tar.gz"))
+;;        (sha256
+;;         (base32
+;;          "1qgrgnbajgnsnx4az4ajnlrhc73q0xxjikk617nf3cs87x4772a6"))))
+;;     (build-system emacs-build-system)
+;;     (propagated-inputs
+;;      `(("emacs-company" ,emacs-company)
+;;        ("emacs-tern" ,emacs-tern)
+;;        ("emacs-dash" ,emacs-dash)
+;;        ("emacs-s" ,emacs-s)))
+;;     (home-page "https://github.com/proofit404/company-tern")
+;;     (synopsis "Tern backend for company-mode")
+;;     (description "This package provides Tern backend for Company.")
+;;     (license license:gpl3+)))
