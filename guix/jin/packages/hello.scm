@@ -10,7 +10,7 @@
 (define-public hello
   (package
     (name "hello")
-    (version "2.10")
+    (version "9.99")
     (source (origin
               (method url-fetch)
               (uri (string-append "mirror://gnu/hello/hello-" version
